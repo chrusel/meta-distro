@@ -1,0 +1,26 @@
+### Shell environment set up for builds. ###
+--------------------------------------------------------------------------------
+       ______ __                            __ ______         __          
+      |      |  |--.----.--.--.-----.-----.|  |   __ \.-----.|  |--.--.--.
+      |   ---|     |   _|  |  |__ --|  -__||  |    __/|  _  ||    <|  |  |
+      |______|__|__|__| |_____|_____|_____||__|___|   |_____||__|__|___  |
+                                                                   |_____|
+--------------------------------------------------------------------------------
+bitbake <image|recipe>                   # build an image or recipe
+bitbake <package> -c <task>              # run a singel task for a single recipe
+bitbake <package> -c devshell            # enter a shell for a single recipe
+bitbake <package> -c listtasks           # list the tasks defined by .bb recipe
+bitbake linux-yocto -c menuconfig        # launch menuconfig
+bitbake-layers show-recipes "*-image-*"  # lists recipe for a single image
+bitbake -e <package>                     # prints environment vars for a recipe
+bitbake -c clean <package>               # run a single build step
+bitbake -v <package>                     # verbose output
+bitbake <package/image> -g -u taskexp    # dependency viewer
+bitbake <image> -c populate_sdk          # compile the sdk installer
+--------------------------------------------------------------------------------
+
+You can now run 'bitbake <target>'
+
+Common targets are:
+    bitbake -k core-image-sato
+
