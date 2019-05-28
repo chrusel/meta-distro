@@ -5,8 +5,7 @@ machine to get a bootable SD-Card image with the ChruselPoky Linux Distribution.
 
 Please see the corresponding sections below for details.
 
-1. Dependencies
-===============
+# 1. Dependencies
 
 * URI: https://git.yoctoproject.org/cgit/cgit.cgi/poky/
     * branch: warrior
@@ -20,11 +19,9 @@ Please see the corresponding sections below for details.
 
 Maintainer: Christian Herzig <github.herzig.info>
 
-2. How To Build
-===============
+# 2. How To Build
 
-2.1 Prerequisite
-----------------
+## 2.1 Prerequisite
 
 Required Tools and Packages:
 
@@ -40,38 +37,36 @@ Fetch and Install repo tool:
     curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
     chmod a+x ~/bin/repo
 
-2.2 Get all the Yocto Meta code
--------------------------------
+## 2.2 Get all the Yocto Meta code
+
     mkdir ~/yocto-rpi
     cd ~/yocto-rpi
     repo init -u git@github.com:chrusel/yocto-manifests.git
     repo sync
 
-2.3 Setup environment
----------------------
+## 2.3 Setup environment
+
     cd poky
     source oe-init-build-env
 
-3. Bake Raspberrypi3 image
-==========================
+# 3. Bake Raspberrypi3 image
 
-3.1 Trigger build engine to do so
----------------------------------
+## 3.1 Trigger build engine to do so
+
     bitbake -k core-image-sato
 
-3.2 Flash image
----------------
+## 3.2 Flash image
+
 **Get the ${DISK} of your SD Card with `sudo fdisk -l` command**
 
     sudo bmaptool copy tmp/deploy/images/raspberrypi3-64/core-image-sato-raspberrypi3-64.wic /dev/sd${DISK}
 
-4. Bake Raspberrypi3 SDK (Cross Toolchain)
-==========================================
+# 4. Bake Raspberrypi3 SDK (Cross Toolchain)
 
-4.1 Trigger build engine to do so
----------------------------------
+## 4.1 Trigger build engine to do so
+
     bitbake core-image-sato -c populate_sdk
 
-4.2 Install SDK
----------------
+## 4.2 Install SDK
+
     ./tmp/deploy/sdk/chruselpoky-glibc-x86_64-core-image-sato-aarch64-raspberrypi3-64-toolchain-2.7.sh
