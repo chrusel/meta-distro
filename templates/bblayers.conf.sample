@@ -5,15 +5,15 @@ POKY_BBLAYERS_CONF_VERSION = "1"
 BBPATH = "${TOPDIR}"
 BBFILES ?= ""
 
-CHRUSEL_POKYREPODIR = "${TOPDIR}/../../"
+CHRUSEL_POKYREPODIR = "${TOPDIR}/.."
 BBLAYERS ?= " \
   ${CHRUSEL_POKYREPODIR}/poky/meta \
   ${CHRUSEL_POKYREPODIR}/poky/meta-poky \
-  ${CHRUSEL_POKYREPODIR}/poky/meta-distro \
-  ${CHRUSEL_POKYREPODIR}/poky/meta-raspberrypi \
-  ${CHRUSEL_POKYREPODIR}/poky/meta-openembedded/meta-oe \
-  ${CHRUSEL_POKYREPODIR}/poky/meta-openembedded/meta-multimedia \
-  ${CHRUSEL_POKYREPODIR}/poky/meta-openembedded/meta-networking \
-  ${CHRUSEL_POKYREPODIR}/poky/meta-openembedded/meta-python \
+  ${CHRUSEL_POKYREPODIR}/chruselpoky/meta-distro \
+  ${CHRUSEL_POKYREPODIR}/chruselpoky/meta-raspberrypi \
+  ${CHRUSEL_POKYREPODIR}/chruselpoky/meta-openembedded/meta-oe \
+  ${CHRUSEL_POKYREPODIR}/chruselpoky/meta-openembedded/meta-multimedia \
+  ${CHRUSEL_POKYREPODIR}/chruselpoky/meta-openembedded/meta-networking \
+  ${CHRUSEL_POKYREPODIR}/chruselpoky/meta-openembedded/meta-python \
   "
 
