@@ -46,8 +46,8 @@ Fetch and Install repo tool:
 
 ## 2.3 Setup environment
 
-    cd poky
-    source oe-init-build-env
+    cd ~/yocto-rpi
+    source chruselpoky/chruselpoky-init-build-env
 
 # 3. Bake Raspberrypi3 image
 
