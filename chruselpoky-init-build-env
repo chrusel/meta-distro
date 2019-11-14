@@ -1,0 +1,10 @@
+#! /bin/sh
+
+# use the miipoky templates
+export TEMPLATECONF="${PWD}/chruselpoky/meta-distro/templates/"
+
+# source the poky build environment
+. poky/oe-init-build-env "$@"
+
+# do some bash prompt tricks:
+export PS1="\[\e[92m\]miipoky\[\e[m\]:\[\e[96m\]\w\[\e[m\]\\$ "
