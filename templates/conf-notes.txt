@@ -23,4 +23,6 @@ You can now run 'bitbake <target>'
 
 Common targets are:
     bitbake -k core-image-sato
+    bitbake -k photobooth-image
+    bitbake -k photobooth-image-dev
 
